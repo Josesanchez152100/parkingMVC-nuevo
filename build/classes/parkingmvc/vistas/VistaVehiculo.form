@@ -139,8 +139,6 @@
                           <Component id="labelInfo" min="-2" pref="260" max="-2" attributes="0"/>
                           <Component id="labelInfohora" min="-2" pref="260" max="-2" attributes="0"/>
                           <Component id="labelHora" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Component id="labelInfotiempo" min="-2" pref="260" max="-2" attributes="0"/>
-                          <Component id="labelTiempo" min="-2" pref="260" max="-2" attributes="0"/>
                           <Component id="labelInfoplaca" min="-2" pref="260" max="-2" attributes="0"/>
                           <Component id="labelPlaca" min="-2" pref="260" max="-2" attributes="0"/>
                           <Component id="labelInfomarca" alignment="0" min="-2" pref="260" max="-2" attributes="0"/>
@@ -179,11 +177,7 @@
                       <Component id="labelInfohora" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="labelHora" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelInfotiempo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelTiempo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                      <EmptySpace pref="78" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -210,7 +204,7 @@
                   <Color blue="45" green="3d" red="38" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Hora de ingreso / salida"/>
+                <Property name="text" type="java.lang.String" value="Hora de ingreso"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="labelHora">
@@ -220,30 +214,6 @@
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="12:35"/>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelInfotiempo">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="12" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="45" green="3d" red="38" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Tiempo en el parqueadero"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelTiempo">
-              <Properties>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="99" green="99" red="99" type="rgb"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="1:50 hora / mins"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

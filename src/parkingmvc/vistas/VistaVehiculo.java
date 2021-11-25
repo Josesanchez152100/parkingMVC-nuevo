@@ -42,8 +42,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
         labelInfo = new javax.swing.JLabel();
         labelInfohora = new javax.swing.JLabel();
         labelHora = new javax.swing.JLabel();
-        labelInfotiempo = new javax.swing.JLabel();
-        labelTiempo = new javax.swing.JLabel();
         labelInfoplaca = new javax.swing.JLabel();
         labelPlaca = new javax.swing.JLabel();
         labelInfomarca = new javax.swing.JLabel();
@@ -111,20 +109,11 @@ public class VistaVehiculo extends javax.swing.JFrame {
         labelInfohora.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelInfohora.setForeground(new java.awt.Color(56, 61, 69));
         labelInfohora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelInfohora.setText("Hora de ingreso / salida");
+        labelInfohora.setText("Hora de ingreso");
 
         labelHora.setForeground(new java.awt.Color(153, 153, 153));
         labelHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelHora.setText("12:35");
-
-        labelInfotiempo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        labelInfotiempo.setForeground(new java.awt.Color(56, 61, 69));
-        labelInfotiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelInfotiempo.setText("Tiempo en el parqueadero");
-
-        labelTiempo.setForeground(new java.awt.Color(153, 153, 153));
-        labelTiempo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelTiempo.setText("1:50 hora / mins");
 
         labelInfoplaca.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         labelInfoplaca.setForeground(new java.awt.Color(56, 61, 69));
@@ -172,8 +161,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
                     .addComponent(labelInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelInfohora, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelHora, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelInfotiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelInfoplaca, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelInfomarca, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -209,11 +196,7 @@ public class VistaVehiculo extends javax.swing.JFrame {
                 .addComponent(labelInfohora)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelHora)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelInfotiempo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelTiempo)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         panelVehiculo.add(panelInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 260, 440));
@@ -743,7 +726,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
     private javax.swing.JLabel labelInfohora;
     private javax.swing.JLabel labelInfomarca;
     private javax.swing.JLabel labelInfoplaca;
-    private javax.swing.JLabel labelInfotiempo;
     private javax.swing.JLabel labelIngresaCedula;
     private javax.swing.JLabel labelIngresarplaca;
     public javax.swing.JLabel labelLogo2;
@@ -751,7 +733,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
     public javax.swing.JLabel labelModelo;
     public javax.swing.JLabel labelPlaca;
     public javax.swing.JLabel labelResultadobusqueda;
-    public javax.swing.JLabel labelTiempo;
     private javax.swing.JPanel panelInfo;
     private javax.swing.JPanel panelNavigation2;
     private javax.swing.JPanel panelVehiculo;

@@ -49,7 +49,7 @@ public class ControladorConsultaVehiculo implements ActionListener{
         String marca = modeloVehiculo.getMarca();
         String color = modeloVehiculo.getColor();        
         String modelo = modeloVehiculo.getModelo();
-//        String hora = modeloVehiculo.getHora();
+        String hora = modeloVehiculo.getHoraIngreso();
         
         if(modeloConsultaVehiculo.buscarVehiculo(vistaVehiculo.fieldIngresoplaca.getText()) != null){
             
@@ -61,7 +61,7 @@ public class ControladorConsultaVehiculo implements ActionListener{
             vistaVehiculo.labelMarca.setText(marca);
             vistaVehiculo.labelColor.setText(color);
             vistaVehiculo.labelModelo.setText(modelo);
-//            vistaVehiculo.labelHora.setText(hora); 
+            vistaVehiculo.labelHora.setText(hora); 
             
         }else{
             

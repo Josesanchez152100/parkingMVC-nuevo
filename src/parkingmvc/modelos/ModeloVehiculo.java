@@ -110,12 +110,6 @@ public class ModeloVehiculo {
 
     public void setHoraSalida(String horaSalida) {
         this.horaSalida = horaSalida;
-    }
-
-    public String getHora() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
+    }   
     
 }
