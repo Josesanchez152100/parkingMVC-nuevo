@@ -6,6 +6,8 @@
 package parkingmvc.vistas;
 
 import java.awt.Color;
+import parkingmvc.controladores.ControladorActualizarParqueadero;
+import parkingmvc.modelos.ModeloParqueadero;
 
 /**
  *
@@ -96,6 +98,11 @@ public class VistaParqueadero extends javax.swing.JFrame {
         btnActualizarTarifa.setForeground(new java.awt.Color(255, 255, 255));
         btnActualizarTarifa.setText("Actualizar");
         btnActualizarTarifa.setBorder(null);
+        btnActualizarTarifa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnActualizarTarifaMouseClicked(evt);
+            }
+        });
         panelTarifa.add(btnActualizarTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 140, 35));
 
         panelNavigation.setBackground(new java.awt.Color(56, 61, 69));
@@ -478,6 +485,17 @@ public class VistaParqueadero extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_panelNavigationMousePressed
+
+    private void btnActualizarTarifaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActualizarTarifaMouseClicked
+        // TODO add your handling code here:
+        VistaParqueadero abrir = new VistaParqueadero();
+        abrir.setLocationRelativeTo(null);
+        abrir.setVisible(true);
+        this.setVisible(false);
+        
+        ModeloParqueadero modeloParqueadero = new ModeloParqueadero();
+        ControladorActualizarParqueadero controladorActualizarParqueadero = new ControladorActualizarParqueadero(abrir, modeloParqueadero);
+    }//GEN-LAST:event_btnActualizarTarifaMouseClicked
 
     /**
      * @param args the command line arguments

@@ -48,6 +48,7 @@ public class ControladorConsultaCliente implements ActionListener{
         String telefono = modeloCliente.getNumeroTelefono();
         String correo = modeloCliente.getCorreoElectronico();
         String direccion = modeloCliente.getDireccion();
+        
         if(modeloConsultaCliente.buscarCliente(Integer.parseInt(vistaCliente.fieldIngresocedula.getText())) != null){
             vistaCliente.labelResultadobusqueda.setText("Exito en la búsqueda del cliente");
             System.out.println("Exito en la búsqueda del cliente");

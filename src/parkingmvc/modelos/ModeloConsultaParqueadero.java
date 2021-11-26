@@ -126,4 +126,37 @@ public class ModeloConsultaParqueadero extends ModeloBD{
             return false;
         }
     }
+    
+     public boolean incrementarParqueadero(int cuposTotales, int cuposDisponibles){
+        
+        // Objeto conexion
+        Connection conexion = conectarBD();
+        // Query para la DB
+        String query = "UPDATE parqueadero SET CuposTotales = ?, CuposDisponibles = ? WHERE Id = 1";
+        
+        try{
+            // Prepara la consulta
+            consultaSQL = conexion.prepareStatement(query);
+            
+            // Ajusta la consulta
+            consultaSQL.setInt(1, cuposTotales);
+            consultaSQL.setInt(2, cuposDisponibles);
+            
+            // Ejecutar consulta
+            int resultado = consultaSQL.executeUpdate();
+            
+            // Resultado de la ejecución
+            if(resultado > 0){
+                System.out.println("Exito al actualizar el parqueadero");
+                return true;
+            }else{
+                System.out.println("Error al actualizar el parqueadero");
+                return false;
+            }
+            
+        }catch(SQLException error){
+            System.out.println("Error al actualizar el parqueadero" + error);
+            return false;
+        }
+    }
 }

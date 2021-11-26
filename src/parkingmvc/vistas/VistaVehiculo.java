@@ -4,9 +4,11 @@
  */
 package parkingmvc.vistas;
 
+import com.sun.glass.events.KeyEvent;
 import java.awt.Color;
 import parkingmvc.controladores.ControladorConsultaVehiculo;
 import parkingmvc.controladores.ControladorRegistroVehiculo;
+import parkingmvc.modelos.FixedSizeDocument;
 import parkingmvc.modelos.ModeloCliente;
 import parkingmvc.modelos.ModeloParqueadero;
 import parkingmvc.modelos.ModeloVehiculo;
@@ -22,6 +24,7 @@ public class VistaVehiculo extends javax.swing.JFrame {
     
     public VistaVehiculo() {
         initComponents();
+        fieldIngresoplaca.setDocument(new FixedSizeDocument(6));
     }
 
     /**
@@ -97,6 +100,11 @@ public class VistaVehiculo extends javax.swing.JFrame {
         fieldIngresoplaca.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         fieldIngresoplaca.setForeground(new java.awt.Color(153, 153, 153));
         fieldIngresoplaca.setBorder(null);
+        fieldIngresoplaca.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fieldIngresoplacaKeyTyped(evt);
+            }
+        });
         panelVehiculo.add(fieldIngresoplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 300, 30));
 
         panelInfo.setBackground(new java.awt.Color(237, 237, 237));
@@ -667,6 +675,15 @@ public class VistaVehiculo extends javax.swing.JFrame {
         ModeloVehiculo modeloVehiculo = new ModeloVehiculo();
         ControladorConsultaVehiculo controladorConsultaVehiculo = new ControladorConsultaVehiculo(abrir, modeloVehiculo);
     }//GEN-LAST:event_btnConsultaPlacaMouseClicked
+
+    private void fieldIngresoplacaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldIngresoplacaKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        
+        if((c<'0' || c>'9') && (c<'a' || c>'z') && (c<'A' || c>'Z') && (c!=(char)KeyEvent.VK_BACKSPACE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_fieldIngresoplacaKeyTyped
 
     /**
      * @param args the command line arguments
