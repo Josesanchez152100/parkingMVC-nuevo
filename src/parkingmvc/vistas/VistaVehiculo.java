@@ -56,8 +56,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
         labelIngresaCedula = new javax.swing.JLabel();
         labelResultadobusqueda = new javax.swing.JLabel();
         btnConsultaPlaca = new javax.swing.JButton();
-        btnCrearvehiculo = new javax.swing.JPanel();
-        btnCrearvehiculoLabel = new javax.swing.JLabel();
         panelNavigation2 = new javax.swing.JPanel();
         btnVehiculo = new javax.swing.JPanel();
         btnVehiculoLabel = new javax.swing.JLabel();
@@ -92,7 +90,7 @@ public class VistaVehiculo extends javax.swing.JFrame {
 
         labelDescripcioningreso.setForeground(new java.awt.Color(153, 153, 153));
         labelDescripcioningreso.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelDescripcioningreso.setText("Por favor ingresa el número de placa");
+        labelDescripcioningreso.setText("Por favor ingresa la placa");
         panelVehiculo.add(labelDescripcioningreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 300, -1));
         panelVehiculo.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, 300, 20));
 
@@ -212,7 +210,7 @@ public class VistaVehiculo extends javax.swing.JFrame {
         labelIngresaCedula.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         labelIngresaCedula.setForeground(new java.awt.Color(153, 153, 153));
         labelIngresaCedula.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelIngresaCedula.setText("Ingresa el número de placa para consultar la información del vehículo");
+        labelIngresaCedula.setText("Ingresa la placa para consultar la información del vehículo");
         panelVehiculo.add(labelIngresaCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 420, 20));
 
         labelResultadobusqueda.setForeground(new java.awt.Color(0, 174, 181));
@@ -230,43 +228,7 @@ public class VistaVehiculo extends javax.swing.JFrame {
                 btnConsultaPlacaMouseClicked(evt);
             }
         });
-        panelVehiculo.add(btnConsultaPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 140, 35));
-
-        btnCrearvehiculo.setBackground(new java.awt.Color(153, 153, 153));
-        btnCrearvehiculo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        btnCrearvehiculoLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnCrearvehiculoLabel.setForeground(new java.awt.Color(255, 255, 255));
-        btnCrearvehiculoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnCrearvehiculoLabel.setText("Crear vehículo");
-        btnCrearvehiculoLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnCrearvehiculoLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnCrearvehiculoLabelMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnCrearvehiculoLabelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCrearvehiculoLabelMouseExited(evt);
-            }
-        });
-
-        javax.swing.GroupLayout btnCrearvehiculoLayout = new javax.swing.GroupLayout(btnCrearvehiculo);
-        btnCrearvehiculo.setLayout(btnCrearvehiculoLayout);
-        btnCrearvehiculoLayout.setHorizontalGroup(
-            btnCrearvehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCrearvehiculoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnCrearvehiculoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        btnCrearvehiculoLayout.setVerticalGroup(
-            btnCrearvehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnCrearvehiculoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
-        );
-
-        panelVehiculo.add(btnCrearvehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
+        panelVehiculo.add(btnConsultaPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 140, 35));
 
         panelNavigation2.setBackground(new java.awt.Color(56, 61, 69));
         panelNavigation2.setMaximumSize(new java.awt.Dimension(800, 60));
@@ -462,7 +424,7 @@ public class VistaVehiculo extends javax.swing.JFrame {
         labelLogo2.setForeground(new java.awt.Color(255, 255, 255));
         labelLogo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLogo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/car-park-white.png"))); // NOI18N
-        labelLogo2.setText("ParkIn MVC");
+        labelLogo2.setText("ParkIng MVC");
         labelLogo2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         labelLogo2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -541,26 +503,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCrearvehiculoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearvehiculoLabelMouseClicked
-        VistaRegistroVehiculo abrir = new VistaRegistroVehiculo();
-        abrir.setLocationRelativeTo(null);
-        abrir.setVisible(true);
-        this.setVisible(false);
-        
-        ModeloCliente modeloCliente = new ModeloCliente();
-        ModeloVehiculo modeloVehiculo = new ModeloVehiculo();
-        ModeloParqueadero modeloParqueadero = new ModeloParqueadero();
-        ControladorRegistroVehiculo controladorRegistroVehiculo = new ControladorRegistroVehiculo(abrir, modeloCliente, modeloVehiculo, modeloParqueadero, 0);
-    }//GEN-LAST:event_btnCrearvehiculoLabelMouseClicked
-
-    private void btnCrearvehiculoLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearvehiculoLabelMouseEntered
-        btnCrearvehiculo.setBackground(Color.decode("#888888"));
-    }//GEN-LAST:event_btnCrearvehiculoLabelMouseEntered
-
-    private void btnCrearvehiculoLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearvehiculoLabelMouseExited
-        btnCrearvehiculo.setBackground(Color.decode("#999999"));
-    }//GEN-LAST:event_btnCrearvehiculoLabelMouseExited
 
     private void btnVehiculoLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVehiculoLabelMouseClicked
         VistaVehiculo abrir = new VistaVehiculo();
@@ -726,8 +668,6 @@ public class VistaVehiculo extends javax.swing.JFrame {
     private javax.swing.JPanel btnConsulta;
     public javax.swing.JLabel btnConsultaLabel;
     public javax.swing.JButton btnConsultaPlaca;
-    private javax.swing.JPanel btnCrearvehiculo;
-    public javax.swing.JLabel btnCrearvehiculoLabel;
     private javax.swing.JPanel btnHome;
     private javax.swing.JPanel btnTarifa;
     public javax.swing.JLabel btnTarifaLabel;

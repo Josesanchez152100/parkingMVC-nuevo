@@ -40,16 +40,17 @@ public class ControladorConsultaCliente implements ActionListener{
         
         // Objeto ModeloConsultaCliente
         ModeloConsultaCliente modeloConsultaCliente = new ModeloConsultaCliente();
-                
-        modeloCliente = modeloConsultaCliente.buscarCliente(Integer.parseInt(vistaCliente.fieldIngresocedula.getText()));
-        String nombre = modeloCliente.getNombresCompletos();
-        int identificacion = modeloCliente.getIdentificacion();
-        String ident=Integer.toString(identificacion);
-        String telefono = modeloCliente.getNumeroTelefono();
-        String correo = modeloCliente.getCorreoElectronico();
-        String direccion = modeloCliente.getDireccion();
         
         if(modeloConsultaCliente.buscarCliente(Integer.parseInt(vistaCliente.fieldIngresocedula.getText())) != null){
+            
+            modeloCliente = modeloConsultaCliente.buscarCliente(Integer.parseInt(vistaCliente.fieldIngresocedula.getText()));
+            String nombre = modeloCliente.getNombresCompletos();
+            int identificacion = modeloCliente.getIdentificacion();
+            String ident=Integer.toString(identificacion);
+            String telefono = modeloCliente.getNumeroTelefono();
+            String correo = modeloCliente.getCorreoElectronico();
+            String direccion = modeloCliente.getDireccion();        
+        
             vistaCliente.labelResultadobusqueda.setText("Exito en la búsqueda del cliente");
             System.out.println("Exito en la búsqueda del cliente");
             System.out.println(nombre);

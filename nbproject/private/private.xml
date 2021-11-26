@@ -12,14 +12,12 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/vistas/VistaVehiculo.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorActualizarParqueadero.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/vistas/VistaParqueadero.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorRegistroVehiculo.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/vistas/VistaCliente.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/modelos/ModeloConsultaParqueadero.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorConsultaCliente.java</file>
-            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorConsultaParqueadero.java</file>
+            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/vistas/VistaConsulta.java</file>
+            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorConsultaVehiculo.java</file>
+            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/modelos/ModeloConsultaCliente.java</file>
+            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorRegistroCliente.java</file>
+            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/controladores/ControladorConsultaVehiculos.java</file>
+            <file>file:/C:/Users/asus/Documents/NetBeansProjects/parkingMVC3/src/parkingmvc/modelos/ModeloConsultaVehiculo.java</file>
         </group>
     </open-files>
 </project-private>

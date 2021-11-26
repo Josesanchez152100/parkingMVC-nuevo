@@ -43,16 +43,15 @@ public class ControladorConsultaVehiculo implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
        // Objeto ModeloConsultaVehiculo
         ModeloConsultaVehiculo modeloConsultaVehiculo = new ModeloConsultaVehiculo();
-                
-        modeloVehiculo = modeloConsultaVehiculo.buscarVehiculo(vistaVehiculo.fieldIngresoplaca.getText());
-        String placa = modeloVehiculo.getPlaca();
-        String marca = modeloVehiculo.getMarca();
-        String color = modeloVehiculo.getColor();        
-        String modelo = modeloVehiculo.getModelo();
-        String hora = modeloVehiculo.getHoraIngreso();
-        
         if(modeloConsultaVehiculo.buscarVehiculo(vistaVehiculo.fieldIngresoplaca.getText()) != null){
-            
+                        
+            modeloVehiculo = modeloConsultaVehiculo.buscarVehiculo(vistaVehiculo.fieldIngresoplaca.getText());        
+            String placa = modeloVehiculo.getPlaca();
+            String marca = modeloVehiculo.getMarca();
+            String color = modeloVehiculo.getColor();        
+            String modelo = modeloVehiculo.getModelo();
+            String hora = modeloVehiculo.getHoraIngreso();     
+                    
             vistaVehiculo.labelResultadobusqueda.setText("Exito en la búsqueda del vehículo");
             System.out.println("Exito en la búsqueda del vehículo");           
             JOptionPane.showMessageDialog(null, "Exito en la búsqueda"); 

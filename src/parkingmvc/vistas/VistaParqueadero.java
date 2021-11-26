@@ -5,8 +5,11 @@
  */
 package parkingmvc.vistas;
 
+import com.sun.glass.events.KeyEvent;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import parkingmvc.controladores.ControladorActualizarParqueadero;
+import parkingmvc.modelos.FixedSizeDocument;
 import parkingmvc.modelos.ModeloParqueadero;
 
 /**
@@ -20,6 +23,7 @@ public class VistaParqueadero extends javax.swing.JFrame {
     
     public VistaParqueadero() {
         initComponents();
+        fieldTarifa.setDocument(new FixedSizeDocument(10));
     }
 
     /**
@@ -77,6 +81,11 @@ public class VistaParqueadero extends javax.swing.JFrame {
         fieldTarifa.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         fieldTarifa.setForeground(new java.awt.Color(153, 153, 153));
         fieldTarifa.setBorder(null);
+        fieldTarifa.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fieldTarifaKeyTyped(evt);
+            }
+        });
         panelTarifa.add(fieldTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 300, 30));
         panelTarifa.add(separador, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 300, 20));
 
@@ -291,7 +300,7 @@ public class VistaParqueadero extends javax.swing.JFrame {
         labelLogo.setForeground(new java.awt.Color(255, 255, 255));
         labelLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/car-park-white.png"))); // NOI18N
-        labelLogo.setText("ParkIn MVC");
+        labelLogo.setText("ParkIng MVC");
         labelLogo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         labelLogo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -488,6 +497,16 @@ public class VistaParqueadero extends javax.swing.JFrame {
         ModeloParqueadero modeloParqueadero = new ModeloParqueadero();
         ControladorActualizarParqueadero controladorActualizarParqueadero = new ControladorActualizarParqueadero(abrir, modeloParqueadero);
     }//GEN-LAST:event_btnActualizarTarifaMouseClicked
+
+    private void fieldTarifaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldTarifaKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        
+        if((c<'0' || c>'9') && (c!=(char)KeyEvent.VK_BACKSPACE)){
+            evt.consume();
+        JOptionPane.showMessageDialog(null, "Solo se admiten números","Validar números",JOptionPane.INFORMATION_MESSAGE);
+        }
+    }//GEN-LAST:event_fieldTarifaKeyTyped
 
     /**
      * @param args the command line arguments

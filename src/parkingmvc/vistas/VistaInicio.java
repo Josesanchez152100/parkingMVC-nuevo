@@ -23,6 +23,7 @@ public class VistaInicio extends javax.swing.JFrame {
     
     public VistaInicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

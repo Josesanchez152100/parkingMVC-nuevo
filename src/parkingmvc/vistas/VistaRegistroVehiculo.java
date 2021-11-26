@@ -24,6 +24,7 @@ public class VistaRegistroVehiculo extends javax.swing.JFrame {
     
     public VistaRegistroVehiculo() {
         initComponents();
+        this.setLocationRelativeTo(null);
         fieldIngresoplaca.setDocument(new FixedSizeDocument(6));
         fieldIngresomarca.setDocument(new FixedSizeDocument(45));
     }
@@ -58,7 +59,6 @@ public class VistaRegistroVehiculo extends javax.swing.JFrame {
         panelNavigation1 = new javax.swing.JPanel();
         btnClose = new javax.swing.JPanel();
         btnCloseLabel = new javax.swing.JLabel();
-        btnActualizarVehiculo = new javax.swing.JButton();
         btnRegistrarVehiculo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -180,7 +180,7 @@ public class VistaRegistroVehiculo extends javax.swing.JFrame {
             .addComponent(btnVolverLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 440, -1, -1));
+        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, -1, -1));
 
         panelNavigation1.setBackground(new java.awt.Color(56, 61, 69));
         panelNavigation1.setMaximumSize(new java.awt.Dimension(800, 60));
@@ -249,19 +249,12 @@ public class VistaRegistroVehiculo extends javax.swing.JFrame {
 
         jPanel1.add(panelNavigation1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 60));
 
-        btnActualizarVehiculo.setBackground(new java.awt.Color(0, 174, 181));
-        btnActualizarVehiculo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnActualizarVehiculo.setForeground(new java.awt.Color(255, 255, 255));
-        btnActualizarVehiculo.setText("Actualizar");
-        btnActualizarVehiculo.setBorder(null);
-        jPanel1.add(btnActualizarVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 150, 35));
-
         btnRegistrarVehiculo.setBackground(new java.awt.Color(0, 174, 181));
         btnRegistrarVehiculo.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnRegistrarVehiculo.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrarVehiculo.setText("Registrar");
         btnRegistrarVehiculo.setBorder(null);
-        jPanel1.add(btnRegistrarVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 150, 35));
+        jPanel1.add(btnRegistrarVehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 150, 35));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -372,7 +365,6 @@ public class VistaRegistroVehiculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnActualizarVehiculo;
     private javax.swing.JPanel btnClose;
     public javax.swing.JLabel btnCloseLabel;
     public javax.swing.JButton btnRegistrarVehiculo;

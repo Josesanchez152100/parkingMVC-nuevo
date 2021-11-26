@@ -6,6 +6,9 @@
 package parkingmvc.vistas;
 
 import java.awt.Color;
+import parkingmvc.controladores.ControladorConsultaVehiculo;
+import parkingmvc.controladores.ControladorConsultaVehiculos;
+import parkingmvc.modelos.ModeloConsultaVehiculo;
 
 /**
  *
@@ -69,19 +72,62 @@ public class VistaConsulta extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(153, 153, 153));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        tableConsulta.setBackground(new java.awt.Color(255, 255, 255));
         tableConsulta.setForeground(new java.awt.Color(56, 61, 69));
         tableConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Placa", "Fecha ingreso", "Hora ingreso", "Salida"
+                "Placa", "Marca", "Modelo", "Color", "Fecha y hora de ingreso"
             }
         ));
         tableConsulta.setGridColor(new java.awt.Color(204, 204, 204));
@@ -99,7 +145,7 @@ public class VistaConsulta extends javax.swing.JFrame {
         labelDescripcionconsulta.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         labelDescripcionconsulta.setForeground(new java.awt.Color(153, 153, 153));
         labelDescripcionconsulta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelDescripcionconsulta.setText("Aquí podrás consultar todos los vehículos ingresados al parqueadero");
+        labelDescripcionconsulta.setText("Aquí podrás consultar todos los vehículosque se encuentran en el parqueadero");
         panelConsulta.add(labelDescripcionconsulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 650, -1));
 
         btnConsultarVehiculos.setBackground(new java.awt.Color(0, 174, 181));
@@ -107,6 +153,11 @@ public class VistaConsulta extends javax.swing.JFrame {
         btnConsultarVehiculos.setForeground(new java.awt.Color(255, 255, 255));
         btnConsultarVehiculos.setText("Consultar");
         btnConsultarVehiculos.setBorder(null);
+        btnConsultarVehiculos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConsultarVehiculosMouseClicked(evt);
+            }
+        });
         panelConsulta.add(btnConsultarVehiculos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 380, 150, 35));
 
         panelNavigation.setBackground(new java.awt.Color(56, 61, 69));
@@ -303,7 +354,7 @@ public class VistaConsulta extends javax.swing.JFrame {
         labelLogo.setForeground(new java.awt.Color(255, 255, 255));
         labelLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/car-park-white.png"))); // NOI18N
-        labelLogo.setText("ParkIn MVC");
+        labelLogo.setText("ParkIng MVC");
         labelLogo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         labelLogo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -489,6 +540,18 @@ public class VistaConsulta extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_panelNavigationMousePressed
+
+    private void btnConsultarVehiculosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConsultarVehiculosMouseClicked
+        // TODO add your handling code here:
+        
+        VistaConsulta abrir = new VistaConsulta();
+        abrir.setLocationRelativeTo(null);
+        abrir.setVisible(true);
+        this.setVisible(false);
+        
+        ModeloConsultaVehiculo modeloConsultaVehiculo = new ModeloConsultaVehiculo();
+        ControladorConsultaVehiculos controladorConsultaVehiculos = new ControladorConsultaVehiculos(abrir);
+    }//GEN-LAST:event_btnConsultarVehiculosMouseClicked
 
     /**
      * @param args the command line arguments

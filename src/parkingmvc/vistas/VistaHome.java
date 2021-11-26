@@ -24,8 +24,7 @@ public class VistaHome extends javax.swing.JFrame {
     int xMouse, yMouse;
     
     public VistaHome() {
-        initComponents();
-        fieldIngresoplaca.setDocument(new FixedSizeDocument(6));
+        initComponents();        
         fieldSalida.setDocument(new FixedSizeDocument(6));
     }
 
@@ -69,9 +68,6 @@ public class VistaHome extends javax.swing.JFrame {
         labelInfo = new javax.swing.JLabel();
         labelInfo1 = new javax.swing.JLabel();
         labelIngresarplaca = new javax.swing.JLabel();
-        labelDescripcioningreso = new javax.swing.JLabel();
-        fieldIngresoplaca = new javax.swing.JTextField();
-        separador1 = new javax.swing.JSeparator();
         labelSalida = new javax.swing.JLabel();
         labelDescripcionsalida = new javax.swing.JLabel();
         fieldSalida = new javax.swing.JTextField();
@@ -288,7 +284,7 @@ public class VistaHome extends javax.swing.JFrame {
         labelLogo.setForeground(new java.awt.Color(255, 255, 255));
         labelLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/car-park-white.png"))); // NOI18N
-        labelLogo.setText("ParkIn MVC");
+        labelLogo.setText("ParkIng MVC");
         labelLogo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         labelLogo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -492,33 +488,17 @@ public class VistaHome extends javax.swing.JFrame {
 
         labelIngresarplaca.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         labelIngresarplaca.setForeground(new java.awt.Color(33, 40, 48));
-        labelIngresarplaca.setText("Ingreso parqueadero vehículo");
+        labelIngresarplaca.setText("Información del parqueadero");
         jPanel1.add(labelIngresarplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, -1, -1));
-
-        labelDescripcioningreso.setForeground(new java.awt.Color(153, 153, 153));
-        labelDescripcioningreso.setText("Por favor ingresa el número de placa");
-        jPanel1.add(labelDescripcioningreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, -1, -1));
-
-        fieldIngresoplaca.setBackground(new java.awt.Color(237, 237, 237));
-        fieldIngresoplaca.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        fieldIngresoplaca.setForeground(new java.awt.Color(153, 153, 153));
-        fieldIngresoplaca.setBorder(null);
-        fieldIngresoplaca.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                fieldIngresoplacaKeyTyped(evt);
-            }
-        });
-        jPanel1.add(fieldIngresoplaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 300, 30));
-        jPanel1.add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 300, 20));
 
         labelSalida.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         labelSalida.setForeground(new java.awt.Color(33, 40, 48));
         labelSalida.setText("Salida vehículo");
-        jPanel1.add(labelSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
+        jPanel1.add(labelSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
         labelDescripcionsalida.setForeground(new java.awt.Color(153, 153, 153));
         labelDescripcionsalida.setText("Ingresa la placa para la salida del vehículo");
-        jPanel1.add(labelDescripcionsalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
+        jPanel1.add(labelDescripcionsalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
 
         fieldSalida.setBackground(new java.awt.Color(237, 237, 237));
         fieldSalida.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -529,7 +509,7 @@ public class VistaHome extends javax.swing.JFrame {
                 fieldSalidaKeyTyped(evt);
             }
         });
-        jPanel1.add(fieldSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 300, 30));
+        jPanel1.add(fieldSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 300, 30));
         jPanel1.add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 370, 300, 20));
 
         btnSalidaPlaca.setBackground(new java.awt.Color(33, 40, 48));
@@ -544,7 +524,7 @@ public class VistaHome extends javax.swing.JFrame {
         btnDisponibilidad.setForeground(new java.awt.Color(255, 255, 255));
         btnDisponibilidad.setText("Disponibilidad");
         btnDisponibilidad.setBorder(null);
-        jPanel1.add(btnDisponibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 140, 35));
+        jPanel1.add(btnDisponibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 140, 35));
 
         labelResultado.setForeground(new java.awt.Color(0, 174, 181));
         labelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -676,15 +656,6 @@ public class VistaHome extends javax.swing.JFrame {
         btnHome.setBackground(Color.decode("#212830"));
     }//GEN-LAST:event_labelLogoMouseExited
 
-    private void fieldIngresoplacaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldIngresoplacaKeyTyped
-        // TODO add your handling code here:
-        char c = evt.getKeyChar();
-        
-        if((c<'0' || c>'9') && (c<'a' || c>'z') && (c<'A' || c>'Z') && (c!=(char)KeyEvent.VK_BACKSPACE)){
-            evt.consume();
-        }
-    }//GEN-LAST:event_fieldIngresoplacaKeyTyped
-
     private void fieldSalidaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fieldSalidaKeyTyped
         // TODO add your handling code here:
         char c = evt.getKeyChar();
@@ -743,10 +714,8 @@ public class VistaHome extends javax.swing.JFrame {
     public javax.swing.JLabel btnTarifaLabel;
     private javax.swing.JPanel btnVehiculo;
     public javax.swing.JLabel btnVehiculoLabel;
-    public javax.swing.JTextField fieldIngresoplaca;
     public javax.swing.JTextField fieldSalida;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel labelDescripcioningreso;
     private javax.swing.JLabel labelDescripcionsalida;
     public javax.swing.JLabel labelDisponibles;
     public javax.swing.JLabel labelHora;
@@ -768,7 +737,6 @@ public class VistaHome extends javax.swing.JFrame {
     private javax.swing.JLabel labelinfoDisponibles;
     private javax.swing.JPanel panelInfo;
     private javax.swing.JPanel panelNavigation;
-    private javax.swing.JSeparator separador1;
     private javax.swing.JSeparator separador2;
     private javax.swing.JSeparator separador3;
     // End of variables declaration//GEN-END:variables

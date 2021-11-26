@@ -214,7 +214,7 @@ public class VistaCliente extends javax.swing.JFrame {
         btnCrearclienteLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnCrearclienteLabel.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearclienteLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnCrearclienteLabel.setText("Crear cliente");
+        btnCrearclienteLabel.setText("Crear cliente/vehículo");
         btnCrearclienteLabel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnCrearclienteLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -234,7 +234,7 @@ public class VistaCliente extends javax.swing.JFrame {
             btnCrearclienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCrearclienteLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnCrearclienteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                .addComponent(btnCrearclienteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         btnCrearclienteLayout.setVerticalGroup(
@@ -242,7 +242,7 @@ public class VistaCliente extends javax.swing.JFrame {
             .addComponent(btnCrearclienteLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
-        panelCliente.add(btnCrearcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
+        panelCliente.add(btnCrearcliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 340, -1, -1));
 
         labelIngresaCedula1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         labelIngresaCedula1.setForeground(new java.awt.Color(153, 153, 153));
@@ -270,7 +270,7 @@ public class VistaCliente extends javax.swing.JFrame {
                 btnConsultarClienteActionPerformed(evt);
             }
         });
-        panelCliente.add(btnConsultarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 140, 35));
+        panelCliente.add(btnConsultarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, 140, 35));
 
         panelNavigation.setBackground(new java.awt.Color(56, 61, 69));
         panelNavigation.setMaximumSize(new java.awt.Dimension(800, 60));
@@ -466,7 +466,7 @@ public class VistaCliente extends javax.swing.JFrame {
         labelLogo.setForeground(new java.awt.Color(255, 255, 255));
         labelLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/car-park-white.png"))); // NOI18N
-        labelLogo.setText("ParkIn MVC");
+        labelLogo.setText("ParkIng MVC");
         labelLogo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         labelLogo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

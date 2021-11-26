@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -65,7 +66,6 @@ public class ModeloConsultaVehiculo extends ModeloBD{
         Connection conexion = conectarBD();
         // Query para la DB
         String query = "SELECT * FROM Vehiculo WHERE Placa = ?";
-//        String query = "SELECT * FROM cliente WHERE Identificacion = ?";
         
         try{
             //preparar conexión  
@@ -80,7 +80,7 @@ public class ModeloConsultaVehiculo extends ModeloBD{
             //Organizar el resultado
             ModeloVehiculo vehiculo = new ModeloVehiculo();
             
-            //Llenar el Cliente
+            //Llenar el Vehículo            
             if(resultadoSQL.next()){
                 vehiculo.setPlaca(resultadoSQL.getString("Placa"));
                 vehiculo.setIdCliente(resultadoSQL.getInt("IdCliente"));
@@ -180,5 +180,51 @@ public class ModeloConsultaVehiculo extends ModeloBD{
             System.out.println("Error al actualizar vehiculo" + error);
             return false;
         }
+    }
+    
+    public ArrayList buscarVehiculosConMatriz(){
+        
+        // Objeto conexion
+        Connection conexion = conectarBD();
+        ArrayList<ModeloVehiculo> miLista = new ArrayList();
+        
+        // Query para la DB              
+        String query = "SELECT * FROM Vehiculo WHERE Estado = 1";
+        
+        try{
+            //preparar conexión  
+            consultaSQL = conexion.prepareStatement(query);
+            
+            //Ajusto la consulta
+            //consultaSQL.setString(1, estado);
+            
+            //Ejecutar la consulta
+            resultadoSQL = consultaSQL.executeQuery();
+            
+            //Organizar el resultado
+            
+            
+            //Llenar el Cliente
+            if(resultadoSQL.next()){
+                do{
+                    ModeloVehiculo vehiculo = new ModeloVehiculo();
+                    vehiculo.setPlaca(resultadoSQL.getString("Placa"));                                
+                    vehiculo.setMarca(resultadoSQL.getString("Marca"));
+                    vehiculo.setColor(resultadoSQL.getString("Color"));
+                    vehiculo.setModelo(resultadoSQL.getString("Modelo"));                
+                    vehiculo.setHoraIngreso(resultadoSQL.getString("HoraIngreso"));                
+                    miLista.add(vehiculo);                    
+                }while(resultadoSQL.next());
+                return miLista;
+                
+            }else{
+                System.out.println("Error al buscar vehiculos");
+                return null;
+            }
+        }catch(SQLException error){
+            System.out.println("Error al buscar vehiculos" + error);
+            return null;
+        }       
+        
     }
 }

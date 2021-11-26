@@ -59,7 +59,6 @@ public class VistaRegistroCliente extends javax.swing.JFrame {
         labelIngresaTelefono = new javax.swing.JLabel();
         fieldIngresotelefono = new javax.swing.JTextField();
         separador5 = new javax.swing.JSeparator();
-        btnActualizarCliente = new javax.swing.JButton();
         panelNavigation = new javax.swing.JPanel();
         btnClose = new javax.swing.JPanel();
         btnCloseLabel = new javax.swing.JLabel();
@@ -191,7 +190,7 @@ public class VistaRegistroCliente extends javax.swing.JFrame {
             .addComponent(btnVolverLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
         );
 
-        panelRegistro.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
+        panelRegistro.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, -1, -1));
 
         labelIngresaTelefono.setForeground(new java.awt.Color(153, 153, 153));
         labelIngresaTelefono.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -209,13 +208,6 @@ public class VistaRegistroCliente extends javax.swing.JFrame {
         });
         panelRegistro.add(fieldIngresotelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 300, 30));
         panelRegistro.add(separador5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 300, 20));
-
-        btnActualizarCliente.setBackground(new java.awt.Color(0, 174, 181));
-        btnActualizarCliente.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnActualizarCliente.setForeground(new java.awt.Color(255, 255, 255));
-        btnActualizarCliente.setText("Actualizar");
-        btnActualizarCliente.setBorder(null);
-        panelRegistro.add(btnActualizarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 350, 150, 35));
 
         panelNavigation.setBackground(new java.awt.Color(56, 61, 69));
         panelNavigation.setMaximumSize(new java.awt.Dimension(800, 60));
@@ -437,7 +429,6 @@ public class VistaRegistroCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnActualizarCliente;
     private javax.swing.JPanel btnClose;
     public javax.swing.JLabel btnCloseLabel;
     public javax.swing.JButton btnRegistrarCliente;
