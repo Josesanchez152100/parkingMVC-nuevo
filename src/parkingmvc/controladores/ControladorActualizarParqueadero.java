@@ -49,12 +49,12 @@ public class ControladorActualizarParqueadero implements ActionListener{
         if(cuposDisponibles > 0 || cuposReservados > 0){}
         if(cuposTotales < cuposTotalesNuevos){
             
-            vistaParqueadero.labelResultadotarifa.setText("Exito en la actualización del parqueadero");
-            System.out.println("Exito en la actualización del parqueadero");
+            vistaParqueadero.labelResultadotarifa.setText("Éxito en la actualización del parqueadero");
+            System.out.println("Éxito en la actualización del parqueadero");
             int cuposDisponiblesNuevos = cuposTotalesNuevos - cuposReservados;            
             
             modeloConsultaParqueadero.incrementarParqueadero(cuposTotalesNuevos, cuposDisponiblesNuevos);
-            JOptionPane.showMessageDialog(null, "Exito al registrar el vehículo");
+            JOptionPane.showMessageDialog(null, "Éxito en la actualización del parqueadero");
         }else{
             JOptionPane.showMessageDialog(null, "El tamaño ingresado debe ser mayor al actual");  
         }

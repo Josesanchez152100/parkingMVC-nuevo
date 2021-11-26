@@ -50,7 +50,7 @@ public class ControladorConsultaParqueadero implements ActionListener{
             vistaHome.labelDisponibles.setText(Integer.toString(cuposDisponibles));
             vistaHome.labelOcupados.setText(Integer.toString(cuposReservados));
             
-            vistaHome.labelResultado.setText("Búsqueda exitos");
+            vistaHome.labelResultado.setText("Búsqueda exitosa");
             
             System.out.println("Exito en la búsqueda de disponibilidad");
             //JOptionPane.showMessageDialog(null, "Exito en la búsqueda de disponibilidad");

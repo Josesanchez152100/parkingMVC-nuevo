@@ -37,7 +37,6 @@ public class VistaParqueadero extends javax.swing.JFrame {
         fieldTarifa = new javax.swing.JTextField();
         separador = new javax.swing.JSeparator();
         labelResultadotarifa = new javax.swing.JLabel();
-        btnConsultarTarifa = new javax.swing.JButton();
         btnActualizarTarifa = new javax.swing.JButton();
         panelNavigation = new javax.swing.JPanel();
         btnVehiculo = new javax.swing.JPanel();
@@ -67,11 +66,11 @@ public class VistaParqueadero extends javax.swing.JFrame {
 
         labelTarifa.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         labelTarifa.setForeground(new java.awt.Color(33, 40, 48));
-        labelTarifa.setText("Tarifa");
+        labelTarifa.setText("Cupos");
         panelTarifa.add(labelTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
 
         labelDescripcionTarifa.setForeground(new java.awt.Color(153, 153, 153));
-        labelDescripcionTarifa.setText("Ingresa el valor de la tarifa actual (minuto o fracción)");
+        labelDescripcionTarifa.setText("        Ingrese el valor de las nuevas celdas totales");
         panelTarifa.add(labelDescripcionTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, -1, -1));
 
         fieldTarifa.setBackground(new java.awt.Color(237, 237, 237));
@@ -86,13 +85,6 @@ public class VistaParqueadero extends javax.swing.JFrame {
         labelResultadotarifa.setText(" ");
         panelTarifa.add(labelResultadotarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 300, -1));
 
-        btnConsultarTarifa.setBackground(new java.awt.Color(33, 40, 48));
-        btnConsultarTarifa.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnConsultarTarifa.setForeground(new java.awt.Color(255, 255, 255));
-        btnConsultarTarifa.setText("Consultar");
-        btnConsultarTarifa.setBorder(null);
-        panelTarifa.add(btnConsultarTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 140, 35));
-
         btnActualizarTarifa.setBackground(new java.awt.Color(0, 174, 181));
         btnActualizarTarifa.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnActualizarTarifa.setForeground(new java.awt.Color(255, 255, 255));
@@ -103,7 +95,7 @@ public class VistaParqueadero extends javax.swing.JFrame {
                 btnActualizarTarifaMouseClicked(evt);
             }
         });
-        panelTarifa.add(btnActualizarTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, 140, 35));
+        panelTarifa.add(btnActualizarTarifa, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 140, 35));
 
         panelNavigation.setBackground(new java.awt.Color(56, 61, 69));
         panelNavigation.setMaximumSize(new java.awt.Dimension(800, 60));
@@ -539,7 +531,6 @@ public class VistaParqueadero extends javax.swing.JFrame {
     public javax.swing.JLabel btnCloseLabel;
     private javax.swing.JPanel btnConsulta;
     public javax.swing.JLabel btnConsultaLabel;
-    public javax.swing.JButton btnConsultarTarifa;
     private javax.swing.JPanel btnHome;
     private javax.swing.JPanel btnTarifa;
     public javax.swing.JLabel btnTarifaLabel;

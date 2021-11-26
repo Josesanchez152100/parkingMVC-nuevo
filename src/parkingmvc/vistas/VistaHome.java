@@ -77,7 +77,6 @@ public class VistaHome extends javax.swing.JFrame {
         fieldSalida = new javax.swing.JTextField();
         separador2 = new javax.swing.JSeparator();
         btnSalidaPlaca = new javax.swing.JButton();
-        btnIngresoPlaca = new javax.swing.JButton();
         btnDisponibilidad = new javax.swing.JButton();
         labelResultado = new javax.swing.JLabel();
 
@@ -538,21 +537,14 @@ public class VistaHome extends javax.swing.JFrame {
         btnSalidaPlaca.setForeground(new java.awt.Color(255, 255, 255));
         btnSalidaPlaca.setText("Salida");
         btnSalidaPlaca.setBorder(null);
-        jPanel1.add(btnSalidaPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 390, 150, 35));
-
-        btnIngresoPlaca.setBackground(new java.awt.Color(0, 174, 181));
-        btnIngresoPlaca.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        btnIngresoPlaca.setForeground(new java.awt.Color(255, 255, 255));
-        btnIngresoPlaca.setText("Ingreso");
-        btnIngresoPlaca.setBorder(null);
-        jPanel1.add(btnIngresoPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 150, 35));
+        jPanel1.add(btnSalidaPlaca, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 150, 35));
 
         btnDisponibilidad.setBackground(new java.awt.Color(153, 153, 153));
         btnDisponibilidad.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         btnDisponibilidad.setForeground(new java.awt.Color(255, 255, 255));
         btnDisponibilidad.setText("Disponibilidad");
         btnDisponibilidad.setBorder(null);
-        jPanel1.add(btnDisponibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 140, 35));
+        jPanel1.add(btnDisponibilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 140, 35));
 
         labelResultado.setForeground(new java.awt.Color(0, 174, 181));
         labelResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -746,7 +738,6 @@ public class VistaHome extends javax.swing.JFrame {
     public javax.swing.JLabel btnConsultaLabel;
     public javax.swing.JButton btnDisponibilidad;
     private javax.swing.JPanel btnHome;
-    public javax.swing.JButton btnIngresoPlaca;
     public javax.swing.JButton btnSalidaPlaca;
     private javax.swing.JPanel btnTarifa;
     public javax.swing.JLabel btnTarifaLabel;
